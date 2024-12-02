@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sistema de Publicación de Resultados Electorales</title>
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages/generales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/pages/generales.js" defer></script>
+    <script src="js/pages/mapas.js"></script> <!--no hizo ni falta poner el module-->
+
+</head>
+
+<body>
+    <header>
+        <!--Logo Principal-->
+        <div class="header-page">
+            <a href="index.html">
+                <img src="img/Logo_DINE_negativo.png" alt="logo" class="logo">
+            </a>
+        </div>
+        <!--Seleccion de opciones-->
+        <nav>
+            <div>
+                <select name="seleccionable" class="seleccionable" id="select-anio" style="width: 100px;" onchange="FuncionComboCargo()"> <!-- Invocacion y Validacion en onchange de seleccion de anio-->
+                    <option disabled selected value="">Año </option>
+                </select>
+
+                <select name="seleccionable" class="seleccionable" id="select-cargo" onchange="FuncionComboDistrito()" style="width: 150px;"> <!--Invocacion y Validacion en onchange de seleccion de Cargo-->
+                    <option disabled selected value="">Cargo</option>
+                </select>
+
+                <select name="seleccionable" class="seleccionable" id="select-distrito" style="width: 150px;" onchange="FuncionComboSeccion()">
+                    <option disabled selected value="">Distrito</option>
+                </select>
+
+                <select name="seleccionable" class="seleccionable" id="select-seccion" style="width: 150px;">
+                    <option disabled selected value="">Seccion</option>
+                </select>
+
+                <button class="boton-filtrar" onclick="FuncionFiltrar()">
+                    <i class="fa fa-search"></i> FILTRAR
+                </button>
+                <button id="boton-informes">
+                    <a class="active" href="informes.html">INFORMES</a>
+                </button>
+            </div>
+            <a class="active" href="index.html" id="boton-inicio">INICIO</a>
+        </nav>
+    </header>
+
+    <main>
+        <!--Carteles de anuncio-->
+        <section id="sec-messages">
+            <p id="texto-verde"><i class="fa fa-thumbs-up"></i> Se agregó con éxito el resultado al informe</p>
+            <p id="texto-rojo"><i class="fa fa-exclamation-triangle"></i> Error: Se produjo un error al intentar agregar
+                resultados al informe</p>
+            <p id="texto-amarillo"><i class="fa fa-exclamation"></i> La operación no se pudo completar</p>
+        </section>
+
+        <section id="sec-titulo">
+            <h2>Elecciones 2021 | Generales</h2>
+            <p class="texto-path">2020 > Generales > Provisorio > Senadores Nacionales > Buenos Aires</p>
+        </section>
+        <section id="sec-contenido">
+            <div class="primer-div">
+                <div id="agreg-inf">
+                    <button id="agregar-informe" onclick="agregarInforme()">+ AGREGAR A INFORME</button>
+                </div>
+                <div class="recuadros-info">
+                    <div id="mesas-escrutadas">
+                        <img src="img/icons/img1.png" style="width: 70px; margin-right: 10px;" /> <!--Icono urna-->
+                        Mesas escrutadas
+                        62.71%
+                    </div>
+                    <div id="electores">
+                        <img src="img/icons/img3.png" style="width: 70px; margin-right: 10px;" /> <!--Icono personas-->
+                        Electores
+                        62.71%
+                    </div>
+                    <div id="part-escrutado">
+                        <img src="img/icons/img4.png" style="width: 70px; margin-right: 10px;" /> <!--Icono manos-->
+                        Participación sobre escrutado
+                        62.71%
+                    </div>
+                </div>
+            </div>
+            <div class="cuadros-detalle">
+                <div id="agrup-politicas">
+                    <div class="title" id="title-agrup-politicas">Agrupaciones Políticas</div>
+                    <div class="info-agrupaciones">
+                        <div>
+                            <!--Partido-->
+                            <div class="nombre-agrupacion">JUNTOS POR EL CAMBIO
+                                <hr>
+                            </div>
+                            <!---->
+                            <!--Agrupacion de partido-->
+                            <div class="div-agrupaciones">
+                                <div><b>JUNTOS</b></div>
+                                <div>38% <br>30000 votos</div>
+                            </div>
+                            <div class="progress" style="background: var(--grafica-amarillo-claro);">
+                                <div class="progress-bar" style="width:75%; background: var(--grafica-amarillo);">
+                                    <span class="progress-bar-text">75%</span>
+                                </div>
+                            </div>
+                            <!---->
+                            <!--Agrupacion de partido-->
+                            <div class="div-agrupaciones">
+                                <div><b>PJ</b></div>
+                                <div>20% <br>12000 votos</div>
+                            </div>
+                            <div class="progress" style="background: var(--grafica-amarillo-claro);">
+                                <div class="progress-bar" style="width:15%; background: var(--grafica-amarillo);">
+                                    <span class="progress-bar-text">15%</span>
+                                </div>
+                            </div>
+                            <!---->
+                        </div>
+                        <div>
+                            <div class="nombre-agrupacion">ECO + VAMOS CORRIENTES
+                                <hr>
+                            </div>
+                            <div class="div-agrupaciones">
+                                <div><b>VERDE</b></div>
+                                <div>38% <br>30000 votos</div>
+                            </div>
+                            <div class="progress" style="background: var(--grafica-verde-claro);">
+                                <div class="progress-bar" style="width:75%; background: var(--grafica-verde);">
+                                    <span class="progress-bar-text">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="mapa">
+                    <div class="title">Buenos Aires</div>
+                    <svg height="210" width="800"> <!--Imagen de buenos aires-->
+                        <path class="leaflet-interactive" stroke="#18a0fb" stroke-opacity="1" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" fill="#18a0fb" fill-opacity="1"
+                            fill-rule="evenodd"
+                            d="M171 55L163 53L150 45L147 50L143 49L133 60L114 60L114 151L116 151L120 155L122 156L126 153L128 149L124 145L126 143L126 138L128 138L129 133L126 129L126 122L134 126L139 126L169 119L179 114L189 97L190 89L189 87L186 87L182 82L185 75L181 69L171 63L170 64L170 58z">
+                        </path>
+                    </svg>
+                </div>
+                <div id="grafica">
+                    <div class="chart-wrap horizontal" id="barras">
+                        <div class="title">Resumen de votos</div>
+                        <div class="grid">
+                            <!--barra-->
+                            <div class="bar" style="--bar-value:85%; --bar-color:var(--grafica-amarillo);"
+                                data-name="Partido 1" title="Your Blog 5%"></div>
+                            <!---->
+                            <div class="bar" style="--bar-value:23%; --bar-color:var(--grafica-lila2)"
+                                data-name="Partido 2" title="Medium 23%"></div>
+                            <div class="bar" style="--bar-value:7%; --bar-color:var(--grafica-bordo)"
+                                data-name="Partido 3" title="Tumblr 7%"></div>
+                            <div class="bar" style="--bar-value:35%; --bar-color:var(--grafica-celeste)"
+                                data-name="Partido 4" title="YouTube 35%"></div>
+                            <div class="bar" style="--bar-value:30%; --bar-color:var(--grafica-lila)"
+                                data-name="Partido 5" title="LinkedIn 30%"></div>
+                            <div class="bar" style="--bar-value:5%; --bar-color:var(--grafica-bordo)"
+                                data-name="Partido 6" title="Twitter 5%"></div>
+                            <div class="bar" style="--bar-value:20%; --bar-color:var(--grafica-gris)" data-name="Otros"
+                                title="Other 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Pie de página-->
+    <footer>
+        <div class="img-footer">
+            <img src="img/icons/Ministerio-del-Interior_pluma.1ab9a7a7.png" alt="icono-ministerio"
+                class="iconos-img-footer">
+            <img src="img/Logo_DINE_negativo.png" alt="logo-footer" class="iconos-img-footer">
+            <img src="img/icons/logos_001-10.4430c8d5.png" alt="iconos-logos" class="iconos-img-footer">
+        </div>
+
+        <div class="texto-footer">
+            <p>
+                Resultados Provisorios en base a telegramas recibidos (Art. 43 Ley 26571 y Art. 105 Ley 19945). Los
+                porcentajes de las agrupaciones políticas son calculados sobre los votos válidos (PASO) conforme al art.
+                45 Ley 26.571 y afirmativos (Generales). No se incluyen los votos correspondientes a los electores
+                residentes en el exterior ni privados de la libertad. Al usar este sitio usted acepta los <a
+                    href="terminos-y-cond.html">Términos y Condiciones</a>.
+            </p>
+        </div>
+    </footer>
+
+</html>

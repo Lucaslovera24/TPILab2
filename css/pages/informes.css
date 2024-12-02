@@ -1,0 +1,227 @@
+:root {
+    --magenta: #ee3d8f;
+    --celeste: #37bbed;
+    --morado: #9283be;
+    --gris-claro: #9e9e9e;
+    --titulos: #333;
+    --textos: #333;
+    --fondo-pantalla: rgb(235, 245, 251);
+    --fondo-Cabecera: #18a0fb;
+    --fondo-Footer: #333;
+    --fondo-Menu: #333;
+    --texto-footer: #9e9e9e;
+    --titulo-Grilla: #727272;
+    --borde-inferior-Grilla: #727272;
+    --borde-Grilla: #c5c5c5;
+    --grafica-amarillo: rgb(252, 210, 0);
+    --grafica-amarillo-claro: rgba(252, 210, 0, 0.3);
+    --grafica-celeste: rgb(0, 169, 232);
+    --grafica-celeste-claro: rgba(0, 169, 232, 0.3);
+    --grafica-bordo: rgb(171, 40, 40);
+    --grafica-bordo-claro: rgba(171, 40, 40, 0.3);
+    --grafica-lila: rgb(112, 76, 159);
+    --grafica-lila-claro: rgba(112, 76, 159, 0.5);
+    --grafica-lila2: rgb(77, 46, 110);
+    --grafica-lila2-claro: rgba(77, 46, 110, 0.5);
+    --grafica-gris: rgb(128, 128, 128);
+    --grafica-gris-claro: rgb(128, 128, 128, 0.5);
+    --grafica-verde: rgb(102, 171, 60);
+    --grafica-verde-claro: rgba(102, 171, 60, 0.5);
+    --mensaje-usuario-amarillo: #ffc107;
+    --mensaje-usuario-verde: #28a745;
+    --mensaje-usuario-rojo: #dc3545;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px
+}
+
+#div-menu {
+    display: flex;
+    align-items: baseline;
+
+
+}
+
+.menu p {
+    color: white;
+    margin: 0px;
+    margin-top: 4px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 13px;
+
+}
+#boton-generales:hover, #boton-paso:hover {
+    background-color: var(--gris-claro);
+}
+#boton-paso {
+    border-radius: 5px;
+    width: 115px;
+    margin-right: 5px;
+    height: 32px;
+    background-color: var(--magenta);
+    border: 0px;
+}
+
+#boton-paso a, #boton-generales a {
+    text-decoration: none;
+}
+
+#boton-generales {
+    border-radius: 5px;
+    width: 115px;
+    margin-right: 5px;
+    height: 32px;
+    background-color: var(--fondo-Cabecera);
+    border: 0px;
+}
+
+
+#boton-inicio-menu {
+    border-radius: 5px;
+    background-color: var(--gris-claro);
+    padding: 8px;
+    font-size: 10px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#boton-inicio-menu a {
+    font-size: 10px;
+    font: #FFF;
+    text-align: center;
+}
+#boton-inicio-menu:hover {
+    background-color: var(--textos);
+}
+
+
+
+
+#sec-titulo h2 {
+    margin-left: 120px;
+}
+
+/*tabla*/
+.tabla-informes {
+    display: grid;
+    border: 1px solid var(--borde-Grilla);
+    border-radius: 15px;
+    width: 1024px;
+    margin: 0px auto 50px auto;
+    border-collapse: collapse;
+    background-color: rgb(250, 250, 250);
+    border-bottom: 1px solid var(--borde-inferior-Grilla);
+}
+thead {
+    color: var(--titulo-Grilla);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--borde-inferior-Grilla);
+}
+thead tr {
+    display: flex;
+    justify-content: space-around;
+}
+
+tbody:hover {
+    background-color: rgb(250, 250, 250);
+}
+tbody {
+    background-color: rgb(255, 255, 255);
+    padding: 15px 0px;
+    font-size: 12px;
+}
+
+
+
+.texto-elecciones-chico {
+    font-size: 12px;
+    color: var(--textos);
+    font-weight: bold;
+    width: 50px;
+}
+.texto-path-chico {
+    font-size: 11px;
+    color: var(--celeste);
+    width: 70px;
+}
+
+svg{
+    width: 300px;
+}
+
+.datos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#mesas-escrutadas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--celeste);
+    border-radius: 5px;
+    margin: 2px;
+    width: 120px;
+    height: 70px;
+    font: #FFF;
+    font-size: 10px;
+    color: white;
+}
+#electores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--magenta);
+    border-radius: 5px;
+    margin: 2px;
+    width: 120px;
+    height: 70px;
+    font: #FFF;
+    font-size: 10px;
+    color: white;
+}
+#part-escrutado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--morado);
+    border-radius: 5px;
+    margin: 2px;
+    width: 120px;
+    height: 70px;
+    font: #FFF;
+    font-size: 10px;
+    color: white;
+}
+
+.datos-agrupacion {
+    height: 325px;
+    padding: 5px;
+    font-size: 10px;
+    color: var(--textos);
+}
+
+tbody{
+    border-bottom: 1px solid #000;
+}
+
+.agrupacion div:first-child {
+    padding-left: 20px;
+    padding-right: 70px;
+}
+#agrup-pj {
+    padding-right: 90px;
+}
+.agrupacion {
+    padding-bottom: 30px;
+}

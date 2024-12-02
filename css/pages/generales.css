@@ -1,0 +1,361 @@
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#boton-inicio {
+    border-radius: 5px;
+    background-color: var(--gris-claro);
+    padding: 8px;
+    font: #FFF;
+    font-size: 10px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#boton-inicio:hover {
+    background-color: #5e5b5b;
+}
+
+nav div {
+    display: flex;
+
+}
+
+#boton-informes {
+    border-radius: 15px;
+    background-color: var(--fondo-Menu);
+    border: 1px solid;
+    border-color: white;
+    font: #FFF;
+    font-size: 10px;
+    height: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#boton-informes:hover {
+    background-color: var(--gris-claro);
+}
+
+.boton-filtrar {
+    background-color: rgb(209, 209, 209);
+    border-radius: 15px;
+    padding: 5px 20px;
+    color: var(--textos);
+    font: #FFF;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.boton-filtrar:hover {
+    background-color: var(--gris-claro);
+}
+
+/*nav div select {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: transparent;
+    height: 30px;
+}*/
+
+.seleccionable {
+    width: 10px;
+    padding-left: 20px;
+    background-color: var(--fondo-Menu);
+    color: var(--celeste);
+    border: none;
+    margin-left: 5px;
+    margin-right: 20px;
+    height: 30px;
+}
+
+
+label {
+    font-size: 14px;
+    background: transparent;
+    color: var(--celeste);
+    font-weight: bold;
+}
+
+
+.texto-path {
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--celeste);
+}
+
+/*recuadros informativos*/
+
+main {
+    margin-left: 50px;
+}
+
+.primer-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.primer-div div button {
+    display: flex;
+    justify-content: left;
+}
+
+.recuadros-info {
+    display: flex;
+    justify-content: end;
+}
+
+#mesas-escrutadas {
+    display: flex;
+    background-color: var(--celeste);
+    border-radius: 10px;
+    margin: 15px;
+    height: 70px;
+    width: 184px;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+#electores {
+    display: flex;
+    background-color: var(--magenta);
+    border-radius: 10px;
+    margin: 15px;
+    height: 70px;
+    width: 184px;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+#part-escrutado {
+    display: flex;
+    background-color: var(--morado);
+    border-radius: 10px;
+    margin: 15px;
+    height: 70px;
+    width: 184px;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+#agregar-informe {
+    background-color: var(--gris-claro);
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-self: center;
+}
+
+#agregar-informe:hover {
+    background-color: rgb(85, 85, 85);
+}
+
+#agreg-inf{
+    display: flex;
+}
+
+.cuadros-detalle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#agrup-politicas,
+#mapa,
+#grafica {
+    border-radius: 25px;
+    border: 1px var(--borde-Grilla) solid;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-weight: bold;
+    Padding: 1.8em 0 0 0;
+    text-align: center;
+    White-space: nowrap;
+}
+
+#agrup-politicas {
+    width: 33%;
+    margin-right: 10px;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+    height: 325px;
+    overflow-y: scroll;
+}
+
+.info-agrupaciones {
+    display: flex;
+    flex-direction: column;
+}
+#title-agrup-politicas {
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
+.div-agrupaciones {
+    display: flex;
+    justify-content: space-between;
+}
+.div-agrupaciones div {
+    font-size: 11px;
+    color: var(--textos);
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.nombre-agrupacion {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#mapa {
+    width: 30%;
+    margin-bottom: 15px;
+    height: 357px;
+}
+
+#mapa svg {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+
+#grafica {
+    margin-left: 10px;
+    width: 30%;
+    margin-bottom: 15px;
+    height: 357px
+}
+
+
+
+/*grafica de barras*/
+.chart-wrap {
+    --chart-width: 260px;
+    --grid-color: #aaa;
+    --bar-thickness: 25px;
+    --bar-rounded: 3px;
+    --bar-spacing: 10px;
+    font-family: sans-serif;
+    width: var(--chart-width);
+}
+
+.chart-wrap .title {
+    font-weight: bold;
+    padding: 1.8em 0 2.8em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* cuando definimos el gráfico en horizontal, lo giramos 90 grados */
+.chart-wrap.horizontal .grid {
+    transform: rotate(-90deg);
+}
+
+.chart-wrap.horizontal .bar::after {
+    /* giramos las letras para horizontal*/
+    transform: rotate(45deg);
+    padding-top: 0px;
+    display: block;
+}
+
+.chart-wrap .grid {
+    margin-left: 50px;
+    position: relative;
+    padding: 5px 0 5px 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid var(--grid-color);
+    font-size: 10px;
+}
+
+/* posicionamos el % del gráfico*/
+.chart-wrap .grid::before {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '0%';
+    position: absolute;
+    left: -0.5em;
+    top: -1.5em;
+}
+
+.chart-wrap .grid::after {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '100%';
+    position: absolute;
+    right: -1.5em;
+    top: -1.5em;
+}
+
+/* giramos las valores de 0% y 100% para horizontal */
+.chart-wrap.horizontal .grid::before,
+.chart-wrap.horizontal .grid::after {
+    transform: rotate(90deg);
+}
+
+.chart-wrap .bar {
+    width: var(--bar-value);
+    height: var(--bar-thickness);
+    margin: var(--bar-spacing) 0;
+    background-color: var(--bar-color);
+    border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
+}
+
+.chart-wrap .bar:hover {
+    opacity: 0.7;
+}
+
+.chart-wrap .bar::after {
+    content: attr(data-name);
+    margin-left: 100%;
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+
+/*barra de progreso*/
+.progress {
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 5px;
+}
+
+.progress-bar-text {
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--textos);
+    font-size: 9px;
+}

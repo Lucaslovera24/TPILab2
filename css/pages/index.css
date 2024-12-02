@@ -1,0 +1,153 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#div-menu {
+    display: flex;
+    align-items: baseline;
+
+
+}
+
+#div-menu p {
+    color: white;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+#boton-paso {
+    background-color: var(--magenta);
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 5px;
+    padding: 5px;
+    border: 0px;
+}
+#boton-paso a {
+    font: #FFF;
+    font-size: 10px;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#boton-paso:hover {
+    background-color: var(--gris-claro);
+}
+
+#boton-generales {
+    background-color: var(--celeste);
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 5px;
+    padding: 5px;
+    border: 0px;
+}
+#boton-generales a {
+    font: #FFF;
+    font-size: 10px;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#boton-generales:hover, #boton-informes:hover {
+    background-color: var(--gris-claro);
+}
+
+#boton-informes {
+    border-radius: 15px;
+    background-color: var(--fondo-Menu);
+    border: 1px solid;
+    border-color: white;
+    font: #FFF;
+    font-size: 10px;
+    padding: 5px;
+}
+
+#boton-informes a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#sec-titulo {
+    display: flex;
+    margin-top: 15px;
+
+}
+
+#sec-titulo .texto {
+    width: 60%;
+    margin-right: 0px;
+    display: inline-block;
+}
+
+#sec-titulo h1,
+p {
+    margin-left: 70px;
+}
+
+#sec-contenido h2,
+p {
+    margin-left: 70px;
+}
+
+.img-data {
+    margin: 15px;
+    width: 350px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.generales-button {
+    background-color: var(--celeste);
+    border-radius: 10px;
+    margin: 25px;
+    height: 100px;
+    width: 400px;
+    padding: 1rem;
+    color: #FFF;
+    font-size: 28px;
+    border: none;
+    font-weight: bold;
+}
+
+.generales-button a {
+    display: flex;
+    align-items: center;
+}
+
+.generales-button:hover {
+    background-color: var(--gris-claro);
+}
+
+.paso-button {
+    background-color: var(--magenta);
+    border-radius: 10px;
+    margin: 25px;
+    height: 100px;
+    width: 400px;
+    padding: 1rem;
+    color: #FFF;
+    font-size: 28px;
+    border: none;
+    font-weight: bold;
+}
+
+.paso-button a {
+    display: flex;
+    align-items: center;
+}
+
+.paso-button:hover {
+    background-color: var(--gris-claro);
+}

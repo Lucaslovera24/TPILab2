@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sistema de Publicación de Resultados Electorales</title>
+    <link rel="shortcut icon" type="image/png" href="img/icons/favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pages/index.css" />
+    <script>
+        let bandera = false
+
+        if(!bandera && !localStorage.getItem('informes')){
+            let informes = []; //para guardar los informes que agregue el usuario
+            localStorage.setItem('informes', JSON.stringify(informes));
+            bandera = true
+            console.log("arreglo creado")
+        }
+       
+        //se supone que el usario ingresa por esta pagina por lo que se inicializa aca
+        //se realizo de esta forma para que si el usuario pasa por el index no se redeclare y se pierdan los informes del mismo
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <!--Logo Principal-->
+        <div class="header-page">
+            <img src="img/Logo_DINE_negativo.png" alt="logo" class="logo">
+        </div>
+        <!--Menú principal-->
+        <nav class="menu">
+            <div id="div-menu">
+                <p>CONSULTAR:</p>
+                <button id="boton-paso">
+                    <a class="active" href="paso.html">PASO</a>
+                </button>
+                <button id="boton-generales">
+                    <a class="active" href="generales.html">GENERALES</a>
+                </button>
+            </div>
+            <div>
+                <button id="boton-informes">
+                    <a class="active" href="informes.html">INFORMES</a>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sec-titulo">
+            <div class="texto">
+                <h1>Resultados electorales</h1>
+                <p>La Dirección Nacional Electoral y el Observatorio Político Electoral del Ministerio del Interior
+                    ponen a
+                    disposición una herramienta de búsqueda avanzada y generación de informes personalizados con los
+                    resultados provisionales de las elecciones desarrolladas en los últimos años. <br> Los resultados
+                    que se
+                    presentan son los correspondientes a escrutinios provisorios de elecciones nacionales. Dicho
+                    recuento es
+                    responsabilidad de la DINE. También se presentan los resultados provisionales de las elecciones
+                    provinciales y/o locales realizados bajo la adhesión a ley de simultaneidad.</p>
+            </div>
+
+            <div>
+                <img src="img/images.png" alt="img-data" class="img-data">
+            </div>
+        </section>
+
+        <section id="sec-contenido">
+            <h2>Elecciones 2021</h2>
+            <p>Seleccione el tipo de elección que quiere consultar</p>
+            <div class="buttons">
+                <!--Boton de paso-->
+                <button class="paso-button">
+                    <a href="paso.html">
+                        <img src="img/icons/img1.png" style="width: 70px; margin-right: 10px;"/>
+                        Paso
+                    </a>
+                </button>
+                <!--Boton de generales-->
+                <button class="generales-button">
+                    <a href="generales.html">
+                        <img src="img/icons/img1.png" style="width: 70px; margin-right: 10px;"/>
+                        Generales
+                    </a>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!--Pie de página-->
+    <footer style="margin-top: 68px;">
+        <div class="img-footer">
+            <img src="img/icons/Ministerio-del-Interior_pluma.1ab9a7a7.png" alt="icono-ministerio"
+                class="iconos-img-footer">
+            <img src="img/Logo_DINE_negativo.png" alt="logo-footer" class="iconos-img-footer">
+            <img src="img/icons/logos_001-10.4430c8d5.png" alt="iconos-logos" class="iconos-img-footer">
+        </div>
+
+        <div class="texto-footer">
+            <p>
+                Resultados Provisorios en base a telegramas recibidos (Art. 43 Ley 26571 y Art. 105 Ley 19945). Los
+                porcentajes de las agrupaciones políticas son calculados sobre los votos válidos (PASO) conforme al art.
+                45 Ley 26.571 y afirmativos (Generales). No se incluyen los votos correspondientes a los electores
+                residentes en el exterior ni privados de la libertad. Al usar este sitio usted acepta los <a
+                    href="terminos-y-cond.html">Términos y Condiciones</a>.
+            </p>
+        </div>
+
+    </footer>
+
+</html>
